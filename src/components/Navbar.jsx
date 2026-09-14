@@ -74,22 +74,22 @@ function Navbar() {
 
           {/* Right side buttons - Desktop */}
           <div className="hidden lg:flex items-center gap-3">
-            <button className="px-4 py-2 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-sm font-medium">
+            <a href="#contact" className="px-4 py-2 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-sm font-medium">
               Sign In
-            </button>
-            <button className="gradient-btn text-white px-5 py-2 rounded-full text-sm font-semibold">
+            </a>
+            <a href="#contact" className="gradient-btn text-white px-5 py-2 rounded-full text-sm font-semibold">
               Sign Up
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu buttons */}
           <div className="lg:hidden flex items-center gap-2">
-            <button className="px-3 py-1.5 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-sm font-medium">
+            <a href="#contact" className="px-3 py-1.5 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-sm font-medium">
               Sign In
-            </button>
-            <button className="gradient-btn text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+            </a>
+            <a href="#contact" className="gradient-btn text-white px-4 py-1.5 rounded-full text-sm font-semibold">
               Sign Up
-            </button>
+            </a>
           </div>
         </div>
       </div>
