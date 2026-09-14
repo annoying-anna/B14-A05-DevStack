@@ -71,4 +71,4 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
   );
 }
 
-export d
+export default YourStack;
