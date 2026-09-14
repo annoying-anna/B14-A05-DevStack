@@ -37,11 +37,23 @@ function App() {
   };
 
   const removeFromStack = (id) => {
+    const tech = stack.find((item) => item.id === id);
     setStack(stack.filter((item) => item.id !== id));
+    if (tech) {
+      toast.info(`${tech.name} removed from your stack`, {
+        position: "bottom-right",
+        theme: "dark"
+      });
+    }
   };
 
   const removeAllFromStack = () => {
+    const count = stack.length;
     setStack([]);
+    toast.info(`${count} technology${count > 1 ? 'ies' : 'y'} removed from your stack`, {
+      position: "bottom-right",
+      theme: "dark"
+    });
   };
 
   const categories = [...new Set(technologies.map((tech) => tech.category))];
