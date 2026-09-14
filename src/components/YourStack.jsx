@@ -5,10 +5,10 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
     <div className="your-stack-panel rounded-2xl p-6 sticky top-24 h-fit">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-[#E8E8F0]">Your Stack</h2>
-        <span className="text-[#9494B8] text-sm">
+        <span className="gradient-text font-semibold text-sm">
           {stack.length === 0
             ? 'Empty'
-            : `${stack.length} Technology${stack.length > 1 ? 's' : ''} Selected`}
+            : `${stack.length} Tech${stack.length > 1 ? 's' : ''}`}
         </span>
       </div>
 
@@ -19,8 +19,8 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
             </svg>
           </div>
-          <p className="text-[#9494B8] text-sm">No technologies added yet.</p>
-          <p className="text-[#9494B8] text-xs mt-1">Start building your stack by adding technologies.</p>
+          <p className="text-[#E8E8F0] font-medium text-sm mb-1">No technologies added yet</p>
+          <p className="text-[#9494B8] text-xs">Start building your stack by exploring technologies above.</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -71,4 +71,4 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
   );
 }
 
-export default YourStack;
+export d
