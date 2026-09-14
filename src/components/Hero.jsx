@@ -1,9 +1,6 @@
-import { useRef } from 'react';
 import bannerImg from '../assets/banner-stack.png';
 
 function Hero() {
-  const videoRef = useRef(null);
-
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
