@@ -33,7 +33,7 @@ function TechCard({ tech, onAddToStack, isInStack }) {
         className={`mt-4 w-full py-2.5 rounded-xl font-semibold text-sm transition-all ${
           isInStack
             ? 'bg-green-500/20 text-green-400 cursor-not-allowed border border-green-500/30'
-            : 'gradient-btn text-white hover:opacity-90'
+            : 'gradient-btn text-white hover:opacity-90 hover:shadow-lg'
         }`}
       >
         {isInStack ? '✓ Added to Stack' : '+ Add to Stack'}
