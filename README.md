@@ -49,3 +49,4 @@ Conditional rendering means showing different UI based on certain conditions (li
 
 ### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 Data flows **down** via props: the parent passes values to the child as attributes. A child sends data **up** by calling a callback function that the parent passes down as a prop. In this project, `App.jsx` passes `onAddToStack`, `onRemove`, and `onRemoveAll` functions as props to `TechCard` and `YourStack`, so the children can notify the parent of user actions.
+
