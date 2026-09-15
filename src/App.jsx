@@ -12,6 +12,7 @@ function App() {
   const [technologies, setTechnologies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [stack, setStack] = useState([]);
+  const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -78,13 +79,25 @@ function App() {
 
           {/* Category filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">
-            <button className="gradient-btn text-white px-5 py-2 rounded-full text-sm font-medium">
+            <button
+              onClick={() => setActiveCategory('All')}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                activeCategory === 'All'
+                  ? 'gradient-btn text-white'
+                  : 'border border-[#2A2A45] text-[#9494B8] hover:border-[#FF2E90]/50 hover:text-[#FF2E90]'
+              }`}
+            >
               All
             </button>
             {categories.map((cat) => (
               <button
                 key={cat}
-                className="px-5 py-2 rounded-full text-sm font-medium border border-[#2A2A45] text-[#9494B8] hover:border-[#FF2E90]/50 hover:text-[#FF2E90] transition-all"
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                  activeCategory === cat
+                    ? 'gradient-btn text-white'
+                    : 'border border-[#2A2A45] text-[#9494B8] hover:border-[#FF2E90]/50 hover:text-[#FF2E90]'
+                }`}
               >
                 {cat}
               </button>
@@ -101,14 +114,16 @@ function App() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {technologies.map((tech) => (
-                    <TechCard
-                      key={tech.id}
-                      tech={tech}
-                      onAddToStack={addToStack}
-                      isInStack={stack.some((item) => item.id === tech.id)}
-                    />
-                  ))}
+                  {technologies
+                    .filter((tech) => activeCategory === 'All' || tech.category === activeCategory)
+                    .map((tech) => (
+                      <TechCard
+                        key={tech.id}
+                        tech={tech}
+                        onAddToStack={addToStack}
+                        isInStack={stack.some((item) => item.id === tech.id)}
+                      />
+                    ))}
                 </div>
               )}
             </div>

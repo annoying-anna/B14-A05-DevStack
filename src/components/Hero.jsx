@@ -57,7 +57,6 @@ function Hero() {
           <div className="relative flex justify-center">
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 via-[#FF2E90]/20 to-[#7B2CBF]/20 rounded-3xl blur-3xl"></div>
             <img
-              ref={videoRef}
               src={bannerImg}
               alt="Technology stack illustration"
               className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
