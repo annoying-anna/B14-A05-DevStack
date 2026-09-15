@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-orange: #FF6B35;
+  --color-brand-pink: #FF2E90;
+  --color-brand-violet: #7B2CBF;
+  --color-dark-bg: #0D0D1A;
+  --color-dark-surface: #1A1A2E;
+  --color-dark-card: #1E1E32;
+  --color-dark-border: #2A2A45;
+  --color-dark-text: #E8E8F0;
+  --color-dark-muted: #9494B8;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --gradient-brand: linear-gradient(135deg, #FF6B35 0%, #FF2E90 50%, #7B2CBF 100%);
+  --gradient-text: linear-gradient(135deg, #FF6B35 0%, #FF2E90 50%, #7B2CBF 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: #0D0D1A;
+  color: #E8E8F0;
+  min-height: 100vh;
+}
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  background: var(--gradient-brand);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 46, 144, 0.3);
+}
+
+.tech-card {
+  background: #1E1E32;
+  border: 1px solid #2A2A45;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  border-color: #FF2E90;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(255, 46, 144, 0.15);
+}
+
+.category-chip {
+  background: rgba(255, 46, 144, 0.15);
+  color: #FF2E90;
+  border: 1px solid rgba(255, 46, 144, 0.3);
+}
+
+.your-stack-panel {
+  background: #1E1E32;
+  border: 1px solid #2A2A45;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A45;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2E90;
+}
