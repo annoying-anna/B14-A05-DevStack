@@ -60,11 +60,12 @@ function App() {
   const categories = [...new Set(technologies.map((tech) => tech.category))];
 
   return (
-    <div className="min-h-screen bg-[#0D0D1A]">
+    <div className="min-h-screen flex flex-col bg-[#0D0D1A]">
       <ToastContainer />
       <Navbar />
       <Hero />
-      
+
+      <main className="flex-grow">
       <section id="technologies" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -72,7 +73,7 @@ function App() {
               Explore <span className="gradient-text">Technologies</span>
             </h2>
             <p className="text-[#9494B8] max-w-2xl mx-auto">
-              Browse through our curated collection of cutting-edge technologies. 
+              Browse through our curated collection of cutting-edge technologies.
               Click &quot;Add to Stack&quot; to build your perfect development environment.
             </p>
           </div>
@@ -140,7 +141,7 @@ function App() {
         </div>
       </section>
 
-      {/* Mobile Your Stack - shown as a modal or bottom sheet */}
+      {/* Mobile Your Stack */}
       <section className="lg:hidden py-8 border-t border-[#2A2A45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <YourStack
@@ -151,18 +152,18 @@ function App() {
         </div>
       </section>
 
-      {/* Projects section placeholder */}
+      {/* Projects section */}
       <section id="projects" className="py-20 border-t border-[#2A2A45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-[#E8E8F0] mb-4">Featured <span className="gradient-text">Projects</span></h2>
           <p className="text-[#9494B8] max-w-2xl mx-auto">
-            Discover real-world projects built with the technologies you love. 
+            Discover real-world projects built with the technologies you love.
             Get inspired and see what you can create with your custom stack.
           </p>
         </div>
       </section>
 
-      {/* About section placeholder */}
+      {/* About section */}
       <section id="about" className="py-20 border-t border-[#2A2A45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -171,12 +172,12 @@ function App() {
                 About <span className="gradient-text">DevStack</span>
               </h2>
               <p className="text-[#9494B8] leading-relaxed mb-6">
-                DevStack was born from the idea that building a tech stack shouldn't be overwhelming. 
+                DevStack was born from the idea that building a tech stack shouldn't be overwhelming.
                 We help developers discover, compare, and assemble the best tools for their projects.
               </p>
               <p className="text-[#9494B8] leading-relaxed">
-                Whether you're a seasoned engineer or just starting out, our platform provides 
-                the insights and comparisons you need to make informed decisions about your 
+                Whether you're a seasoned engineer or just starting out, our platform provides
+                the insights and comparisons you need to make informed decisions about your
                 technology choices.
               </p>
             </div>
@@ -187,7 +188,7 @@ function App() {
                 { label: 'Stacks Created', value: '25K+' },
                 { label: 'Ratings', value: '4.9/5' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-[#1E1E32] border border-[#2A2A45] rounded-2xl p-6 text-center">
+                <div key={stat.label} className="bg-[#1E1E32] border border-[#2A2A45] rounded-2xl p-6 text-center hover:border-[#FF2E90]/30 transition-colors">
                   <p className="text-3xl font-bold gradient-text mb-1">{stat.value}</p>
                   <p className="text-[#9494B8] text-sm">{stat.label}</p>
                 </div>
@@ -196,6 +197,7 @@ function App() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

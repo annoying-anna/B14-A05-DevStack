@@ -1,11 +1,11 @@
 function TechCard({ tech, onAddToStack, isInStack }) {
   return (
-    <div className="tech-card rounded-2xl p-6 flex flex-col">
+    <div className="tech-card rounded-2xl p-6 flex flex-col h-full">
       <div className="flex items-start justify-between mb-4">
-        <div className="w-14 h-14 rounded-xl bg-[#0D0D1A] flex items-center justify-center p-2">
+        <div className="w-14 h-14 rounded-xl bg-[#0D0D1A] flex items-center justify-center p-2 flex-shrink-0">
           <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain" />
         </div>
-        <span className="category-chip px-3 py-1 rounded-full text-xs font-semibold">
+        <span className="category-chip px-3 py-1 rounded-full text-xs font-semibold flex-shrink-0">
           {tech.badge}
         </span>
       </div>
@@ -13,7 +13,7 @@ function TechCard({ tech, onAddToStack, isInStack }) {
       <p className="text-[#9494B8] text-sm leading-relaxed flex-grow mb-4">
         {tech.description}
       </p>
-      <div className="flex items-center justify-between pt-4 border-t border-[#2A2A45]">
+      <div className="flex items-center justify-between pt-4 border-t border-[#2A2A45] mt-auto">
         <div className="flex items-center gap-3">
           <span className="category-chip px-2.5 py-1 rounded-full text-xs font-medium">
             {tech.category}

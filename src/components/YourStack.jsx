@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 
 function YourStack({ stack, onRemove, onRemoveAll }) {
   return (
-    <div className="your-stack-panel rounded-2xl p-6 sticky top-24 h-fit">
+    <div className="your-stack-panel rounded-2xl p-5 sticky top-24 h-fit max-h-[calc(100vh-8rem)] overflow-y-auto">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-[#E8E8F0]">Your Stack</h2>
         <span className="gradient-text font-semibold text-sm">

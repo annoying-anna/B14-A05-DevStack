@@ -59,7 +59,7 @@ function Hero() {
             <img
               src={bannerImg}
               alt="Technology stack illustration"
-              className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl"
+              className="relative w-full max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
             />
           </div>
         </div>

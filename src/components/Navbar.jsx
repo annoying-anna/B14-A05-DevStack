@@ -30,30 +30,9 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Mobile hamburger */}
-          <button
-            className="lg:hidden text-[#E8E8F0] hover:text-[#FF2E90] transition-colors p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-
           {/* Brand logo + name */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg gradient-btn flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg gradient-btn flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-sm">D</span>
             </div>
             <span className="text-xl font-bold text-[#E8E8F0]">Dev Stack</span>
@@ -82,12 +61,31 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Mobile menu buttons */}
+          {/* Mobile hamburger + buttons */}
           <div className="lg:hidden flex items-center gap-2">
-            <a href="#contact" className="px-3 py-1.5 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-sm font-medium">
+            <button
+              className="text-[#E8E8F0] hover:text-[#FF2E90] transition-colors p-2 -mr-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <a href="#contact" className="px-3 py-1.5 text-[#E8E8F0] hover:text-[#FF2E90] transition-colors text-xs font-medium">
               Sign In
             </a>
-            <a href="#contact" className="gradient-btn text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+            <a href="#contact" className="gradient-btn text-white px-3 py-1.5 rounded-full text-xs font-semibold">
               Sign Up
             </a>
           </div>
